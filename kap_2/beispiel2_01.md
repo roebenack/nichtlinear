@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Beispiel 2.1 (S. 13-14)
+title: Beispiel 2.1
 mathjax: true
 ---
 
-Zu den zwei Vektoren
+Zu dem von den zwei Vektoren
 
 $$
 u_{1}=\left(\begin{array}{c}
@@ -18,6 +18,7 @@ u_{1}=\left(\begin{array}{c}
 \end{array}\right)
 $$
 
+aufgespannten Untervektorraum
 wird das orthogonale Komplement berechnet:
 
 ### Maxima
