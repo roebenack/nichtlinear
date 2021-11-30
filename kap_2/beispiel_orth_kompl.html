@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <title>beispiel_orth_kompl</title>
+    <meta name="generator" content="wxMaxima"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script type="text/x-mathjax-config">  MathJax.Hub.Config({
+    displayAlign: "left",
+    context: "MathJax",
+    TeX: {TagSide: "left"}
+  })
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async="async">  // A comment that hinders wxWidgets from optimizing this tag too much.
+</script>
+    <link rel="stylesheet" type="text/css" href="beispiel_orth_kompl_htmlimg/beispiel_orth_kompl.css"/>
+  </head>
+  <body>
+    <!-- ****************************************************** -->
+    <!-- *        Created with wxMaxima version 20.12.1       * -->
+    <!-- ****************************************************** -->
+    <noscript>
+      <div class="error message">
+        <p>Please enable JavaScript in order to get a 2d display of the equations embedded in this web page.</p>
+      </div>
+    </noscript>
+    <p hidden="hidden">\(      \DeclareMathOperator{\abs}{abs}
+      \newcommand{\ensuremath}[1]{\mbox{$#1$}}
+\)</p>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i1)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">load</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">eigen</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i2)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">u1</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">columnvector</span>
+            <span class="code_operator">(</span>
+            <span class="code_operator">[</span>
+            <span class="code_number">1</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">2</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">3</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i3)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">u2</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">columnvector</span>
+            <span class="code_operator">(</span>
+            <span class="code_operator">[</span>
+            <span class="code_number">4</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">5</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">6</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i4)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">orthogonal_complement</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">u1</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">u2</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}\operatorname{span}\left( \begin{pmatrix}-3\\
+6\\
+-3\end{pmatrix}\right) \]
+</p>
+    <hr/>
+    <p>
+      <small> Created with 
+        <a href="https://wxMaxima-developers.github.io/wxmaxima/">wxMaxima</a>.</small>
+    </p>
+  </body>
+</html>
