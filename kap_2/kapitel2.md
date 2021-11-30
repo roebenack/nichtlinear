@@ -6,8 +6,6 @@ permalink: kapitel2
 
 # Mathematische Grundlagen
 
-[Beispiel 2.1](beispiel_orth_kompl.html): Orthogonales Komplement, [html](beispiel_orth_kompl.html), [wxm](beispiel_orth_kompl.wxmx)
-
 |Beispiel|Seite(n)|Beschreibung| | |
 |:---|:---|:---|---|---|
 |[Beispiel 2.1](beispiel2_01.md)|S. 13-14| Orthogonales Komplement| [html](beispiel_orth_kompl.html)| [wxmx](beispiel_orth_kompl.wxmx)|

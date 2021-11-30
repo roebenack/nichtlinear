@@ -10,7 +10,7 @@ $$
 \dot{x}=x^{2},\quad x(0)=p>0
 $$
 
-kann man symbolisch lösen. DieLösung lässt sich nicht über den Zeitraum $t=1/p$ hinaus fortsetzen.
+kann man symbolisch lösen. Die Lösung lässt sich nicht über den Zeitraum $t=1/p$ hinaus fortsetzen.
 
 ### Maxima
 
