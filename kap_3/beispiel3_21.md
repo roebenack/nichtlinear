@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Beispiel 3.3
+title: Beispiel 3.21
 mathjax: true
 ---
 
@@ -11,9 +11,9 @@ $$
 f(x)=\sin x_{3}\frac{\partial}{\partial x_{1}}+\cos x_{3}\frac{\partial}{\partial x_{2}}\quad\text{und}\quad h(x)=x_{1}^{2}+x_{2}^{2}.
 $$
 
-Berechnet werden die erste, zweite und dritte [Lie-Ableitung](https://de.wikipedia.org/wiki/Lie-Ableitung) des Skalarfeldes $h$ in Richtung des Vektorfeldes $f$:
+Berechnet wird die Lie-Ableitung des Kovektorfeldes $\operatorname{d}h$ in Richtung des Vektorfeldes $f$:
 
 ### Maxima
 
-<iframe src="lie_scalar.html" width="100%" height="900"></iframe>
+<iframe src="lie_kovektor.html" width="100%" height="950"></iframe>
 

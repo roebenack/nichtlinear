@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <title>Annihilator1</title>
+    <meta name="generator" content="wxMaxima"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script type="text/x-mathjax-config">  MathJax.Hub.Config({
+    displayAlign: "left",
+    context: "MathJax",
+    TeX: {TagSide: "left"}
+  })
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async="async">  // A comment that hinders wxWidgets from optimizing this tag too much.
+</script>
+    <link rel="stylesheet" type="text/css" href="Annihilator1_htmlimg/Annihilator1.css"/>
+  </head>
+  <body>
+    <!-- ****************************************************** -->
+    <!-- *        Created with wxMaxima version 20.12.1       * -->
+    <!-- ****************************************************** -->
+    <noscript>
+      <div class="error message">
+        <p>Please enable JavaScript in order to get a 2d display of the equations embedded in this web page.</p>
+      </div>
+    </noscript>
+    <p hidden="hidden">\(      \DeclareMathOperator{\abs}{abs}
+      \newcommand{\ensuremath}[1]{\mbox{$#1$}}
+\)</p>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i1)
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">load</span>
+            <span class="code_operator">(</span>
+            <span class="code_string">"eigen"</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i2)
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">f1</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">columnvector</span>
+            <span class="code_operator">(</span>
+            <span class="code_operator">[</span>
+            <span class="code_function">sin</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x3</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_function">cos</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x3</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">0</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{(f1)	}\begin{pmatrix}\sin{\left( \ensuremath{\mathrm{x3}}\right) }\\
+\cos{\left( \ensuremath{\mathrm{x3}}\right) }\\
+0\end{pmatrix}\]
+</p>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i3)
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">f2</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">columnvector</span>
+            <span class="code_operator">(</span>
+            <span class="code_operator">[</span>
+            <span class="code_number">0</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">0</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">1</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{(f2)	}\begin{pmatrix}0\\
+0\\
+1\end{pmatrix}\]
+</p>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i5)
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">orthogonal_complement</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">f1</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">f2</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\]\[\mbox{Proviso:} \,\operatorname{notequal}\left( \sin{\left( \ensuremath{\mathrm{x3}}\right) }\operatorname{,}0\right) \ensuremath{\mathrm{ and }}\operatorname{notequal}\left( \sin{\left( \ensuremath{\mathrm{x3}}\right) }\operatorname{,}0\right) \]
+</p>
+    <p>\[\operatorname{	}\operatorname{span}\left( \begin{pmatrix}-\cos{\left( \ensuremath{\mathrm{x3}}\right) }\\
+\sin{\left( \ensuremath{\mathrm{x3}}\right) }\\
+0\end{pmatrix}\right) \]
+</p>
+    <hr/>
+    <p>
+      <small> Created with
+        <a href="https://wxMaxima-developers.github.io/wxmaxima/">wxMaxima</a>.</small>
+    </p>
+  </body>
+</html>

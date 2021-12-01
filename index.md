@@ -15,5 +15,5 @@ Für die symbolischen Berechnungen wird das Open-Source-Computer-Algebra-System 
 
 |Kapitel| Kapitelüberschrift|
 |---|---|
-|[Kapitel 2](kap_2/kapitel2.md)|Matehmatische Grundlagen|
+|[Kapitel 2](kap_2/kapitel2.md)|Mathematische Grundlagen|
 |[Kapitel 3](kap_3/kapitel3.md)|Differentialgeometrische Begriffe|

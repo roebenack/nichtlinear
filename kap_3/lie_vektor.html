@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="">
   <head>
-    <title>lie_scalar</title>
+    <title>lie_vektor</title>
     <meta name="generator" content="wxMaxima"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <script type="text/x-mathjax-config">  MathJax.Hub.Config({
@@ -12,7 +12,7 @@
 </script>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async="async">  // A comment that hinders wxWidgets from optimizing this tag too much.
 </script>
-    <link rel="stylesheet" type="text/css" href="lie_scalar_htmlimg/lie_scalar.css"/>
+    <link rel="stylesheet" type="text/css" href="lie_vektor_htmlimg/lie_vektor.css"/>
   </head>
   <body>
     <!-- ****************************************************** -->
@@ -27,7 +27,7 @@
       \newcommand{\ensuremath}[1]{\mbox{$#1$}}
 \)</p>
     <!-- Text cell -->
-    <div class="comment">Lie-Ableitung eines Skalarfeldes
+    <div class="comment">Lie-Klammer bzw. Lie-Ableitung eines Vektorfeldes
 </div>
     <!-- Code cell -->
     <table>
@@ -38,7 +38,7 @@
         </td>
         <td>
           <span class="input">
-            <span class="code_function">LieScalar</span>
+            <span class="code_function">LieBracket</span>
             <span class="code_operator">(</span>
             <span class="code_operator">[</span>
             <span class="code_variable">l</span>
@@ -51,13 +51,17 @@
             <span class="code_operator">[</span>
             <span class="code_variable">f</span>
             <span class="code_endofline">,</span>
-            <span class="code_variable">h</span>
+            <span class="code_variable">g</span>
             <span class="code_endofline">,</span>
             <span class="code_variable">x</span>
             <span class="code_endofline">,</span>
             <span class="code_variable">k</span>
             <span class="code_endofline">,</span>
-            <span class="code_variable">Lfh</span>
+            <span class="code_variable">Df</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">Dg</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">ad</span>
             <span class="code_operator">]</span>
             <span class="code_endofline">,</span>
             <span class="code_endofline">
@@ -100,18 +104,16 @@
             <span class="code_number">1</span>
             <span class="code_operator">]</span>
             <span class="code_endofline">,</span>
-            <span class="code_comment">/* Vektorfeld */</span>
             <span class="code_endofline">
               <br/>
             </span>    
-            <span class="code_variable">h</span>
+            <span class="code_variable">g</span>
             <span class="code_operator">:</span>
             <span class="code_variable">l</span>
             <span class="code_operator">[</span>
             <span class="code_number">2</span>
             <span class="code_operator">]</span>
             <span class="code_endofline">,</span>
-            <span class="code_comment">/* Skalarfeld */</span>
             <span class="code_endofline">
               <br/>
             </span>    
@@ -122,7 +124,6 @@
             <span class="code_number">3</span>
             <span class="code_operator">]</span>
             <span class="code_endofline">,</span>
-            <span class="code_comment">/* Variable   */</span>
             <span class="code_endofline">
               <br/>
             </span>    
@@ -175,7 +176,7 @@
             <span class="code_function">then</span>
             <span class="code_function">return</span>
             <span class="code_operator">(</span>
-            <span class="code_variable">h</span>
+            <span class="code_variable">g</span>
             <span class="code_operator">)</span>
             <span class="code_endofline">
               <br/>
@@ -184,29 +185,53 @@
             <span class="code_endofline">
               <br/>
             </span>        
-            <span class="code_variable">Lfh</span>
+            <span class="code_variable">Df</span>
             <span class="code_operator">:</span>
             <span class="code_function">jacobian</span>
             <span class="code_operator">(</span>
-            <span class="code_operator">[</span>
-            <span class="code_variable">h</span>
-            <span class="code_operator">]</span>
+            <span class="code_variable">f</span>
             <span class="code_endofline">,</span>
             <span class="code_variable">x</span>
             <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_endofline">
+              <br/>
+            </span>        
+            <span class="code_variable">Dg</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">jacobian</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">g</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_endofline">
+              <br/>
+            </span>        
+            <span class="code_variable">ad</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">list_matrix_entries</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">Dg</span>
             <span class="code_endofline">.</span>
             <span class="code_variable">f</span>
+            <span class="code_operator">−</span>
+            <span class="code_variable">Df</span>
+            <span class="code_endofline">.</span>
+            <span class="code_variable">g</span>
+            <span class="code_operator">)</span>
             <span class="code_endofline">,</span>
             <span class="code_endofline">
               <br/>
             </span>        
             <span class="code_function">return</span>
             <span class="code_operator">(</span>
-            <span class="code_function">LieScalar</span>
+            <span class="code_function">LieBracket</span>
             <span class="code_operator">(</span>
             <span class="code_variable">f</span>
             <span class="code_endofline">,</span>
-            <span class="code_variable">Lfh</span>
+            <span class="code_variable">ad</span>
             <span class="code_endofline">,</span>
             <span class="code_variable">x</span>
             <span class="code_endofline">,</span>
@@ -251,20 +276,20 @@
             <span class="code_endofline">,</span>
             <span class="code_number">0</span>
             <span class="code_operator">]</span>
-            <span class="code_endofline">$</span>
+            <span class="code_endofline">;</span>
             <span class="code_endofline">
               <br/>
             </span>
-            <span class="code_variable">h</span>
+            <span class="code_variable">g</span>
             <span class="code_operator">:</span>
-            <span class="code_variable">x1</span>
-            <span class="code_operator">^</span>
-            <span class="code_number">2</span>
-            <span class="code_operator">+</span>
-            <span class="code_variable">x2</span>
-            <span class="code_operator">^</span>
-            <span class="code_number">2</span>
-            <span class="code_endofline">$</span>
+            <span class="code_operator">[</span>
+            <span class="code_number">0</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">0</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">1</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">;</span>
             <span class="code_endofline">
               <br/>
             </span>
@@ -277,13 +302,19 @@
             <span class="code_endofline">,</span>
             <span class="code_variable">x3</span>
             <span class="code_operator">]</span>
-            <span class="code_endofline">$</span>
+            <span class="code_endofline">;</span>
           </span>
         </td>
       </tr>
     </table>
+    <p>\[\operatorname{(f)	}\left[ \sin{\left( \ensuremath{\mathrm{x3}}\right) }\operatorname{,}\cos{\left( \ensuremath{\mathrm{x3}}\right) }\operatorname{,}0\right] \]
+</p>
+    <p>\[\operatorname{(g)	}\left[ 0\operatorname{,}0\operatorname{,}1\right] \]
+</p>
+    <p>\[\operatorname{(x)	}\left[ \ensuremath{\mathrm{x1}}\operatorname{,}\ensuremath{\mathrm{x2}}\operatorname{,}\ensuremath{\mathrm{x3}}\right] \]
+</p>
     <!-- Text cell -->
-    <div class="comment">Lie-Ableitung erster Ordnung
+    <div class="comment">Lie-Klammer erster Ordnung
 </div>
     <!-- Code cell -->
     <table>
@@ -294,11 +325,11 @@
         </td>
         <td>
           <span class="input">
-            <span class="code_function">LieScalar</span>
+            <span class="code_function">LieBracket</span>
             <span class="code_operator">(</span>
             <span class="code_variable">f</span>
             <span class="code_endofline">,</span>
-            <span class="code_variable">h</span>
+            <span class="code_variable">g</span>
             <span class="code_endofline">,</span>
             <span class="code_variable">x</span>
             <span class="code_operator">)</span>
@@ -307,75 +338,36 @@
         </td>
       </tr>
     </table>
-    <p>\[\operatorname{	}2 \ensuremath{\mathrm{x1}} \sin{\left( \ensuremath{\mathrm{x3}}\right) }+2 \ensuremath{\mathrm{x2}} \cos{\left( \ensuremath{\mathrm{x3}}\right) }\]
+    <p>\[\operatorname{	}\left[ -\cos{\left( \ensuremath{\mathrm{x3}}\right) }\operatorname{,}\sin{\left( \ensuremath{\mathrm{x3}}\right) }\operatorname{,}0\right] \]
 </p>
     <!-- Text cell -->
-    <div class="comment">Lie-Ableitung zweiter Ordnung
+    <div class="comment">Lie-Klammer zweiter Ordnung
 </div>
     <!-- Code cell -->
     <table>
       <tr>
         <td>
-          <span class="prompt">(%i7)	
+          <span class="prompt">(%i6)	
   </span>
         </td>
         <td>
           <span class="input">
-            <span class="code_function">LieScalar</span>
+            <span class="code_function">LieBracket</span>
             <span class="code_operator">(</span>
             <span class="code_variable">f</span>
             <span class="code_endofline">,</span>
-            <span class="code_variable">h</span>
+            <span class="code_variable">g</span>
             <span class="code_endofline">,</span>
             <span class="code_variable">x</span>
             <span class="code_endofline">,</span>
             <span class="code_number">2</span>
             <span class="code_operator">)</span>
             <span class="code_endofline">;</span>
-            <span class="code_endofline">
-              <br/>
-            </span>
-            <span class="code_function">trigsimp</span>
-            <span class="code_operator">(</span>
-            <span class="code_variable">%</span>
-            <span class="code_operator">)</span>
-            <span class="code_endofline">;</span>
           </span>
         </td>
       </tr>
     </table>
-    <p>\[\operatorname{	}2 {{\sin{\left( \ensuremath{\mathrm{x3}}\right) }}^{2}}+2 {{\cos{\left( \ensuremath{\mathrm{x3}}\right) }}^{2}}\]
-</p>
-    <p>\[\operatorname{	}2\]
-</p>
-    <!-- Text cell -->
-    <div class="comment">Lie-Ableitung dritter Ordnung
-</div>
-    <!-- Code cell -->
-    <table>
-      <tr>
-        <td>
-          <span class="prompt">(%i8)	
-  </span>
-        </td>
-        <td>
-          <span class="input">
-            <span class="code_function">LieScalar</span>
-            <span class="code_operator">(</span>
-            <span class="code_variable">f</span>
-            <span class="code_endofline">,</span>
-            <span class="code_variable">h</span>
-            <span class="code_endofline">,</span>
-            <span class="code_variable">x</span>
-            <span class="code_endofline">,</span>
-            <span class="code_number">3</span>
-            <span class="code_operator">)</span>
-            <span class="code_endofline">;</span>
-          </span>
-        </td>
-      </tr>
-    </table>
-    <p>\[\operatorname{	}0\]
+    <p>\[\operatorname{	}\left[ 0\operatorname{,}0\operatorname{,}0\right] \]
 </p>
     <hr/>
     <p>
