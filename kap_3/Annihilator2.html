@@ -26,6 +26,9 @@
     <p hidden="hidden">\(      \DeclareMathOperator{\abs}{abs}
       \newcommand{\ensuremath}[1]{\mbox{$#1$}}
 \)</p>
+    <!-- Text cell -->
+    <div class="comment">Vektorfelder
+</div>
     <!-- Code cell -->
     <table>
       <tr>
@@ -72,6 +75,9 @@
 </p>
     <p>\[\operatorname{(f2)	}\left[ 0\operatorname{,}0\operatorname{,}1\right] \]
 </p>
+    <!-- Text cell -->
+    <div class="comment">Zusammenfassen in einer Matrix
+</div>
     <!-- Code cell -->
     <table>
       <tr>
@@ -97,6 +103,9 @@
     <p>\[\operatorname{(FT)	}\begin{pmatrix}\sin{\left( \ensuremath{\mathrm{x3}}\right) } &amp; \cos{\left( \ensuremath{\mathrm{x3}}\right) } &amp; 0\\
 0 &amp; 0 &amp; 1\end{pmatrix}\]
 </p>
+    <!-- Text cell -->
+    <div class="comment">Kern (Nullraum)
+</div>
     <!-- Code cell -->
     <table>
       <tr>
@@ -117,49 +126,10 @@
         </td>
       </tr>
     </table>
-    <p>\[\]\[\mbox{Proviso:}\, \operatorname{notequal}\left( \sin{\left( \ensuremath{\mathrm{x3}}\right) }\operatorname{,}0\right) \ensuremath{\mathrm{ and }}\operatorname{notequal}\left( \sin{\left( \ensuremath{\mathrm{x3}}\right) }\operatorname{,}0\right) \]
+    <p>\[\]\[\mbox{Proviso:} \operatorname{notequal}\left( \sin{\left( \ensuremath{\mathrm{x3}}\right) }\operatorname{,}0\right) \ensuremath{\mathrm{ and }}\operatorname{notequal}\left( \sin{\left( \ensuremath{\mathrm{x3}}\right) }\operatorname{,}0\right) \]
 </p>
     <p>\[\operatorname{(Ann)	}\operatorname{span}\left( \begin{pmatrix}-\cos{\left( \ensuremath{\mathrm{x3}}\right) }\\
 \sin{\left( \ensuremath{\mathrm{x3}}\right) }\\
-0\end{pmatrix}\right) \]
-</p>
-    <!-- Code cell -->
-    <table>
-      <tr>
-        <td>
-          <span class="prompt">(%i6)
-  </span>
-        </td>
-        <td>
-          <span class="input">
-            <span class="code_variable">w</span>
-            <span class="code_operator">:</span>
-            <span class="code_function">transpose</span>
-            <span class="code_operator">(</span>
-            <span class="code_function">first</span>
-            <span class="code_operator">(</span>
-            <span class="code_variable">Ann</span>
-            <span class="code_operator">)</span>
-            <span class="code_operator">)</span>
-            <span class="code_endofline">;</span>
-            <span class="code_endofline">
-              <br/>
-            </span>
-            <span class="code_function">nullspace</span>
-            <span class="code_operator">(</span>
-            <span class="code_variable">w</span>
-            <span class="code_operator">)</span>
-            <span class="code_endofline">;</span>
-          </span>
-        </td>
-      </tr>
-    </table>
-    <p>\[\operatorname{(w)	}\begin{pmatrix}-\cos{\left( \ensuremath{\mathrm{x3}}\right) } &amp; \sin{\left( \ensuremath{\mathrm{x3}}\right) } &amp; 0\end{pmatrix}\]\[\mbox{Proviso:}\, \operatorname{notequal}\left( -\cos{\left( \ensuremath{\mathrm{x3}}\right) }\operatorname{,}0\right) \]
-</p>
-    <p>\[\operatorname{	}\operatorname{span}\left( \begin{pmatrix}0\\
-0\\
--\sin{\left( \ensuremath{\mathrm{x3}}\right) }\end{pmatrix}\operatorname{,}\begin{pmatrix}-\sin{\left( \ensuremath{\mathrm{x3}}\right) }\\
--\cos{\left( \ensuremath{\mathrm{x3}}\right) }\\
 0\end{pmatrix}\right) \]
 </p>
     <hr/>

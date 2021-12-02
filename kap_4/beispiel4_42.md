@@ -1,0 +1,19 @@
+---
+layout: page
+title: Beispiel 4.42
+mathjax: true
+---
+
+## Mobiler Roboter, Berechnung der Steuerbarkeitsmatrix
+
+Für das kinematische Modell des mobilen Roboters wird die *Steuerbarkeitsmatrix* berechnet.
+
+### Maxima
+
+<iframe src="Roboter_rel_Grad.html" width="100%" height="1050"></iframe>
+
+
+Klaus Röbenack:
+[*Nichtlineare Regelungssysteme - Theorie und Anwendung der exakten Linearisierung.*](https://link.springer.com/book/10.1007/978-3-662-44091-9)   
+Springer Vieweg, 2017, **S. 154**.
+

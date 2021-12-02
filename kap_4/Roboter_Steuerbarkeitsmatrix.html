@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <title>Roboter_Steuerbarkeitsmatrix</title>
+    <meta name="generator" content="wxMaxima"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script type="text/x-mathjax-config">  MathJax.Hub.Config({
+    displayAlign: "left",
+    context: "MathJax",
+    TeX: {TagSide: "left"}
+  })
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async="async">  // A comment that hinders wxWidgets from optimizing this tag too much.
+</script>
+    <link rel="stylesheet" type="text/css" href="Roboter_Steuerbarkeitsmatrix_htmlimg/Roboter_Steuerbarkeitsmatrix.css"/>
+  </head>
+  <body>
+    <!-- ****************************************************** -->
+    <!-- *        Created with wxMaxima version 20.12.1       * -->
+    <!-- ****************************************************** -->
+    <noscript>
+      <div class="error message">
+        <p>Please enable JavaScript in order to get a 2d display of the equations embedded in this web page.</p>
+      </div>
+    </noscript>
+    <p hidden="hidden">\(      \DeclareMathOperator{\abs}{abs}
+      \newcommand{\ensuremath}[1]{\mbox{$#1$}}
+\)</p>
+    <!-- Text cell -->
+    <div class="comment">Lie-Klammer
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i1)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">LieBracket</span>
+            <span class="code_operator">(</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">l</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">=</span>
+            <span class="code_function">block</span>
+            <span class="code_operator">(</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">f</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">g</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">k</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">Df</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">Dg</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">ad</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">,</span>
+            <span class="code_endofline">
+              <br/>
+            </span>    
+            <span class="code_function">if</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">length</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">l</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">&lt;</span>
+            <span class="code_number">3</span>
+            <span class="code_operator">)</span>
+            <span class="code_function">or</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">length</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">l</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">&gt;</span>
+            <span class="code_number">4</span>
+            <span class="code_operator">)</span>
+            <span class="code_function">then</span>
+            <span class="code_endofline">
+              <br/>
+            </span>       
+            <span class="code_function">error</span>
+            <span class="code_operator">(</span>
+            <span class="code_string">"Aufruf mit 3 oder 4 Argumenten."</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_endofline">
+              <br/>
+            </span>    
+            <span class="code_variable">f</span>
+            <span class="code_operator">:</span>
+            <span class="code_variable">l</span>
+            <span class="code_operator">[</span>
+            <span class="code_number">1</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">,</span>
+            <span class="code_endofline">
+              <br/>
+            </span>    
+            <span class="code_variable">g</span>
+            <span class="code_operator">:</span>
+            <span class="code_variable">l</span>
+            <span class="code_operator">[</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">,</span>
+            <span class="code_endofline">
+              <br/>
+            </span>    
+            <span class="code_variable">x</span>
+            <span class="code_operator">:</span>
+            <span class="code_variable">l</span>
+            <span class="code_operator">[</span>
+            <span class="code_number">3</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">,</span>
+            <span class="code_endofline">
+              <br/>
+            </span>    
+            <span class="code_function">if</span>
+            <span class="code_function">length</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">l</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">=</span>
+            <span class="code_number">3</span>
+            <span class="code_function">then</span>
+            <span class="code_variable">k</span>
+            <span class="code_operator">:</span>
+            <span class="code_number">1</span>
+            <span class="code_function">else</span>
+            <span class="code_variable">k</span>
+            <span class="code_operator">:</span>
+            <span class="code_variable">l</span>
+            <span class="code_operator">[</span>
+            <span class="code_number">4</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">,</span>
+            <span class="code_endofline">
+              <br/>
+            </span>    
+            <span class="code_function">if</span>
+            <span class="code_function">not</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">nonnegintegerp</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">k</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">)</span>
+            <span class="code_function">then</span>
+            <span class="code_endofline">
+              <br/>
+            </span>       
+            <span class="code_function">error</span>
+            <span class="code_operator">(</span>
+            <span class="code_string">"Ordnung k muss natürliche Zahl sein."</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_endofline">
+              <br/>
+            </span>    
+            <span class="code_function">if</span>
+            <span class="code_variable">k</span>
+            <span class="code_operator">=</span>
+            <span class="code_number">0</span>
+            <span class="code_function">then</span>
+            <span class="code_function">return</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">g</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">
+              <br/>
+            </span>    
+            <span class="code_function">else</span>
+            <span class="code_endofline">
+              <br/>
+            </span>        
+            <span class="code_variable">Df</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">jacobian</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">f</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_endofline">
+              <br/>
+            </span>        
+            <span class="code_variable">Dg</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">jacobian</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">g</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_endofline">
+              <br/>
+            </span>        
+            <span class="code_variable">ad</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">list_matrix_entries</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">Dg</span>
+            <span class="code_endofline">.</span>
+            <span class="code_variable">f</span>
+            <span class="code_operator">−</span>
+            <span class="code_variable">Df</span>
+            <span class="code_endofline">.</span>
+            <span class="code_variable">g</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_endofline">
+              <br/>
+            </span>        
+            <span class="code_function">return</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">LieBracket</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">f</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">ad</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">k</span>
+            <span class="code_operator">−</span>
+            <span class="code_number">1</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <!-- Text cell -->
+    <div class="comment">Steuerbarkeitsmatrix
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i2)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">ControllabilityMatrix</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">f</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">g</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">=</span>
+            <span class="code_function">block</span>
+            <span class="code_operator">(</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">i</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">n</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">L</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">,</span>
+            <span class="code_endofline">
+              <br/>
+            </span>    
+            <span class="code_variable">n</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">length</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_endofline">
+              <br/>
+            </span>    
+            <span class="code_function">if</span>
+            <span class="code_function">length</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">f</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">#</span>
+            <span class="code_variable">n</span>
+            <span class="code_function">then</span>
+            <span class="code_endofline">
+              <br/>
+            </span>        
+            <span class="code_function">error</span>
+            <span class="code_operator">(</span>
+            <span class="code_string">"Dimensionen von f und x müssen übereinstimmen."</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_endofline">
+              <br/>
+            </span>    
+            <span class="code_function">if</span>
+            <span class="code_function">length</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">g</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">#</span>
+            <span class="code_variable">n</span>
+            <span class="code_function">then</span>
+            <span class="code_endofline">
+              <br/>
+            </span>        
+            <span class="code_function">error</span>
+            <span class="code_operator">(</span>
+            <span class="code_string">"Dimensionen von g und x müssen übereinstimmen."</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_endofline">
+              <br/>
+            </span>    
+            <span class="code_variable">L</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">makelist</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">LieBracket</span>
+            <span class="code_operator">(</span>
+            <span class="code_operator">−</span>
+            <span class="code_variable">f</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">g</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">i</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">i</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">0</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">n</span>
+            <span class="code_operator">−</span>
+            <span class="code_number">1</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_endofline">
+              <br/>
+            </span>    
+            <span class="code_function">transpose</span>
+            <span class="code_operator">(</span>
+            <span class="code_function">apply</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">matrix</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">L</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">
+              <br/>
+            </span>    
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <!-- Text cell -->
+    <div class="comment">Beispiel: Mobiler Roboter
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i5)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">f</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">[</span>
+            <span class="code_function">sin</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x3</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_function">cos</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x3</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">0</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">$</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">g</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">[</span>
+            <span class="code_number">0</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">0</span>
+            <span class="code_endofline">,</span>
+            <span class="code_number">1</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">$</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">x1</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x2</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x3</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">$</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <!-- Text cell -->
+    <div class="comment">Berechnung der Steuerbarkeitsmatrix
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i6)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">ControllabilityMatrix</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">f</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">g</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}\begin{pmatrix}0 &amp; \cos{\left( \ensuremath{\mathrm{x3}}\right) } &amp; 0\\
+0 &amp; -\sin{\left( \ensuremath{\mathrm{x3}}\right) } &amp; 0\\
+1 &amp; 0 &amp; 0\end{pmatrix}\]
+</p>
+    <hr/>
+    <p>
+      <small> Created with 
+        <a href="https://wxMaxima-developers.github.io/wxmaxima/">wxMaxima</a>.</small>
+    </p>
+  </body>
+</html>
