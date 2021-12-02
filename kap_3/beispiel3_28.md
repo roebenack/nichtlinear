@@ -20,3 +20,6 @@ Zu berechnen ist eine Basis des Annihilator der von den Vektorfeldern aufgespann
 
 <iframe src="Annihilator2.html" width="100%" height="750"></iframe>
 
+Klaus Röbenack:
+[*Nichtlineare Regelungssysteme - Theorie und Anwendung der exakten Linearisierung.*](https://link.springer.com/book/10.1007/978-3-662-44091-9)   
+Springer Vieweg, 2017, **S. 80-81**.

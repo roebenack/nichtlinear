@@ -22,3 +22,6 @@ Berechnet werden die äußeren Ableitungen $\operatorname{d}\omega$ (2-Form) und
 
 <iframe src="Formen_Ableitung.html" width="100%" height="1000"></iframe>
 
+Klaus Röbenack:
+[*Nichtlineare Regelungssysteme - Theorie und Anwendung der exakten Linearisierung.*](https://link.springer.com/book/10.1007/978-3-662-44091-9)   
+Springer Vieweg, 2017, **S. 100-101**.

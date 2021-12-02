@@ -19,3 +19,8 @@ Berechnet werden die erste, zweite und dritte [Lie-Ableitung](https://de.wikiped
 
 <iframe src="lie_scalar.html" width="100%" height="900"></iframe>
 
+
+Klaus Röbenack:
+[*Nichtlineare Regelungssysteme - Theorie und Anwendung der exakten Linearisierung.*](https://link.springer.com/book/10.1007/978-3-662-44091-9)   
+Springer Vieweg, 2017, **S. 46-47**.
+

@@ -9,7 +9,7 @@ permalink: kapitel3
 |Beispiel|Seite(n)|Beschreibung| | |
 |:---|:---|:---|---|---|
 |[Beispiel 3.3](beispiel3_03.md)|S. 46-47| Lie-Ableitung eines Skalarfeldes| [html](lie_scalar.html)| [wxmx](lie_scalar.wxmx)|
-|[Beispiel 3.11](beispiel3_11.md)|S. 46-47| Lie-Ableitung eines Vektorfeldes (Lie-Klammer)| [html](lie_vektor.html)| [wxmx](lie_vektor.wxmx)|
+|[Beispiel 3.11](beispiel3_11.md)|S. 56-57| Lie-Ableitung eines Vektorfeldes (Lie-Klammer)| [html](lie_vektor.html)| [wxmx](lie_vektor.wxmx)|
 |[Beispiel 3.21](beispiel3_21.md)|S. 67-68| Lie-Ableitung eines Kovektorfeldes| [html](lie_kovektor.html)| [wxmx](lie_kovektor.wxmx)|
 |[Beispiel 3.27](beispiel3_27.md)|S. 79-80| Annihilator (über orthogonales Komplement)| [html](Annihilator1.html)| [wxmx](Annihilator1.wxmx)|
 |[Beispiel 3.28](beispiel3_28.md)|S. 80-81| Annihilator (über den Nullraum)| [html](Annihilator2.html)| [wxmx](Annihilator2.wxmx)|
@@ -19,5 +19,5 @@ permalink: kapitel3
 |[Beispiel 3.44](beispiel3_44.md)|S. 94|Involutiver Abschluss| [html](Involutiv_Abschluss.html)| [wxmx](Involutiv_Abschluss.wxmx)|
 |[Beispiel 3.46](beispiel3_46.md)|S. 97-98|Äußeres Produkt von Differentialformen| [html](Formen_Keilprodukt.html)| [wxmx](Formen_Keilprodukt.wxmx)|
 |[Beispiel 3.50](beispiel3_50.md)|S. 100-101|Äußere Ableitung von Differentialformen| [html](Formen_Ableitung.html)| [wxmx](Formen_Ableitung.wxmx)|
-|[Beispiel 3.57](beispiel3_57.md)|S. 103-104|Integrierbarkeit (Tst mit Satz von Frobenius)| [html](Formen_Integrierbarkeit.html)| [wxmx](Formen_Integrierbarkeit.wxmx)|
+|[Beispiel 3.57](beispiel3_57.md)|S. 103-104|Integrierbarkeit (Test mit Satz von Frobenius)| [html](Formen_Integrierbarkeit.html)| [wxmx](Formen_Integrierbarkeit.wxmx)|
 

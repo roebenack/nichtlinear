@@ -23,3 +23,6 @@ Berechnet werden die äußeren Produkte $\omega \wedge \eta$ (2-Form) und $\omeg
 
 <iframe src="Formen_Keilprodukt.html" width="100%" height="700"></iframe>
 
+Klaus Röbenack:
+[*Nichtlineare Regelungssysteme - Theorie und Anwendung der exakten Linearisierung.*](https://link.springer.com/book/10.1007/978-3-662-44091-9)   
+Springer Vieweg, 2017, **S. 97-98**.
