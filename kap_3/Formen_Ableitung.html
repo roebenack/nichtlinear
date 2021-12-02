@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <title>Formen_Ableitung</title>
+    <meta name="generator" content="wxMaxima"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script type="text/x-mathjax-config">  MathJax.Hub.Config({
+    displayAlign: "left",
+    context: "MathJax",
+    TeX: {TagSide: "left"}
+  })
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async="async">  // A comment that hinders wxWidgets from optimizing this tag too much.
+</script>
+    <link rel="stylesheet" type="text/css" href="Formen_Ableitung_htmlimg/Formen_Ableitung.css"/>
+  </head>
+  <body>
+    <!-- ****************************************************** -->
+    <!-- *        Created with wxMaxima version 20.12.1       * -->
+    <!-- ****************************************************** -->
+    <noscript>
+      <div class="error message">
+        <p>Please enable JavaScript in order to get a 2d display of the equations embedded in this web page.</p>
+      </div>
+    </noscript>
+    <p hidden="hidden">\(      \DeclareMathOperator{\abs}{abs}
+      \newcommand{\ensuremath}[1]{\mbox{$#1$}}
+\)</p>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i2)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">load</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">basic</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_function">if</span>
+            <span class="code_function">get</span>
+            <span class="code_operator">(</span>
+            <span class="code_operator">'</span>
+            <span class="code_variable">cartan</span>
+            <span class="code_endofline">,</span>
+            <span class="code_operator">'</span>
+            <span class="code_variable">version</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">=</span>
+            <span class="code_function">false</span>
+            <span class="code_function">then</span>
+            <span class="code_function">load</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">cartan</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i4)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">x</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">x1</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x2</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x3</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">dx</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">init_cartan</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{(x)	}\left[ \ensuremath{\mathrm{x1}}\operatorname{,}\ensuremath{\mathrm{x2}}\operatorname{,}\ensuremath{\mathrm{x3}}\right] \]
+</p>
+    <p>\[\operatorname{(dx)	}\left[ \ensuremath{\mathrm{dx1}}\operatorname{,}\ensuremath{\mathrm{dx2}}\operatorname{,}\ensuremath{\mathrm{dx3}}\right] \]
+</p>
+    <!-- Text cell -->
+    <div class="comment">1-Form ω
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i7)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">ω</span>
+            <span class="code_operator">:</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">ω1</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">ω2</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">ω3</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_function">depends</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">ω</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">ω</span>
+            <span class="code_operator">:</span>
+            <span class="code_variable">ω</span>
+            <span class="code_endofline">.</span>
+            <span class="code_variable">dx</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{(\omega )	}\left[ \ensuremath{\mathrm{\omega 1}}\operatorname{,}\ensuremath{\mathrm{\omega 2}}\operatorname{,}\ensuremath{\mathrm{\omega 3}}\right] \]
+</p>
+    <p>\[\operatorname{	}\left[ \operatorname{\omega 1}\left( \ensuremath{\mathrm{x1}}\operatorname{,}\ensuremath{\mathrm{x2}}\operatorname{,}\ensuremath{\mathrm{x3}}\right) \operatorname{,}\operatorname{\omega 2}\left( \ensuremath{\mathrm{x1}}\operatorname{,}\ensuremath{\mathrm{x2}}\operatorname{,}\ensuremath{\mathrm{x3}}\right) \operatorname{,}\operatorname{\omega 3}\left( \ensuremath{\mathrm{x1}}\operatorname{,}\ensuremath{\mathrm{x2}}\operatorname{,}\ensuremath{\mathrm{x3}}\right) \right] \]
+</p>
+    <p>\[\operatorname{(\omega )	}\ensuremath{\mathrm{dx3}}\, \ensuremath{\mathrm{\omega 3}}+\ensuremath{\mathrm{dx2}}\, \ensuremath{\mathrm{\omega 2}}+\ensuremath{\mathrm{dx1}}\, \ensuremath{\mathrm{\omega 1}}\]
+</p>
+    <!-- Text cell -->
+    <div class="comment">Äußere Ableitung dω
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i9)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">dω</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">ext_diff</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">ω</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_function">facsum</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">%</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">dx1</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">dx2</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">dx3</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}\ensuremath{\mathrm{dx2}}\, \ensuremath{\mathrm{dx3}}\, \left( \frac{d}{d \ensuremath{\mathrm{x2}}} \ensuremath{\mathrm{\omega 3}}-\frac{d}{d \ensuremath{\mathrm{x3}}} \ensuremath{\mathrm{\omega 2}}\right) +\ensuremath{\mathrm{dx1}}\, \ensuremath{\mathrm{dx3}}\, \left( \frac{d}{d \ensuremath{\mathrm{x1}}} \ensuremath{\mathrm{\omega 3}}-\frac{d}{d \ensuremath{\mathrm{x3}}} \ensuremath{\mathrm{\omega 1}}\right) +\ensuremath{\mathrm{dx1}}\, \ensuremath{\mathrm{dx2}}\, \left( \frac{d}{d \ensuremath{\mathrm{x1}}} \ensuremath{\mathrm{\omega 2}}-\frac{d}{d \ensuremath{\mathrm{x2}}} \ensuremath{\mathrm{\omega 1}}\right) \]
+</p>
+    <!-- Text cell -->
+    <div class="comment">2-Form η
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i11)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">depends</span>
+            <span class="code_operator">(</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">η12</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">η13</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">η23</span>
+            <span class="code_operator">]</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">η</span>
+            <span class="code_operator">:</span>
+            <span class="code_variable">η12</span>
+            <span class="code_operator">·</span>
+            <span class="code_variable">dx1</span>
+            <span class="code_endofline">~</span>
+            <span class="code_variable">dx2</span>
+            <span class="code_operator">+</span>
+            <span class="code_variable">η13</span>
+            <span class="code_operator">·</span>
+            <span class="code_variable">dx1</span>
+            <span class="code_endofline">~</span>
+            <span class="code_variable">dx3</span>
+            <span class="code_operator">+</span>
+            <span class="code_variable">η23</span>
+            <span class="code_operator">·</span>
+            <span class="code_variable">dx2</span>
+            <span class="code_endofline">~</span>
+            <span class="code_variable">dx3</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}\left[ \operatorname{\eta 12}\left( \ensuremath{\mathrm{x1}}\operatorname{,}\ensuremath{\mathrm{x2}}\operatorname{,}\ensuremath{\mathrm{x3}}\right) \operatorname{,}\operatorname{\eta 13}\left( \ensuremath{\mathrm{x1}}\operatorname{,}\ensuremath{\mathrm{x2}}\operatorname{,}\ensuremath{\mathrm{x3}}\right) \operatorname{,}\operatorname{\eta 23}\left( \ensuremath{\mathrm{x1}}\operatorname{,}\ensuremath{\mathrm{x2}}\operatorname{,}\ensuremath{\mathrm{x3}}\right) \right] \]
+</p>
+    <p>\[\operatorname{(\eta )	}\ensuremath{\mathrm{dx2}}\, \ensuremath{\mathrm{dx3}}\, \ensuremath{\mathrm{\eta 23}}+\ensuremath{\mathrm{dx1}}\, \ensuremath{\mathrm{dx3}}\, \ensuremath{\mathrm{\eta 13}}+\ensuremath{\mathrm{dx1}}\, \ensuremath{\mathrm{dx2}}\, \ensuremath{\mathrm{\eta 12}}\]
+</p>
+    <!-- Text cell -->
+    <div class="comment">Äußere Ableitung dη
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i13)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">dη</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">ext_diff</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">η</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_function">factor</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">%</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}\ensuremath{\mathrm{dx1}}\, \ensuremath{\mathrm{dx2}}\, \ensuremath{\mathrm{dx3}}\, \left( \frac{d}{d \ensuremath{\mathrm{x1}}} \ensuremath{\mathrm{\eta 23}}-\frac{d}{d \ensuremath{\mathrm{x2}}} \ensuremath{\mathrm{\eta 13}}+\frac{d}{d \ensuremath{\mathrm{x3}}} \ensuremath{\mathrm{\eta 12}}\right) \]
+</p>
+    <hr/>
+    <p>
+      <small> Created with 
+        <a href="https://wxMaxima-developers.github.io/wxmaxima/">wxMaxima</a>.</small>
+    </p>
+  </body>
+</html>

@@ -4,6 +4,8 @@ title: Beispiel 3.28
 mathjax: true
 ---
 
+## Annihilator einer Distribution (über den Nullraum)
+
 Man betrachte die auf $\mathcal{M}=\mathbb{R}^{3}$
 definierten Vektorfelder 
 

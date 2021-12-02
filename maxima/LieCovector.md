@@ -18,7 +18,8 @@ $$
 Mehrfache Lie-Ableitungen sind rekursiv durch
 
 $$
-L_f^{k+1} \omega(x)=\frac{\partial L_f^k\omega(x)}{\partial x} f(x)
+L_f^{k+1} \omega(x)= 
+L_F \left(L_f^k\omega\right)(x)
 \quad\text{mit}\quad
 L_f^0\omega(x)=\omega(x)
 $$

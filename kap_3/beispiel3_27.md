@@ -4,6 +4,8 @@ title: Beispiel 3.27
 mathjax: true
 ---
 
+## Annihilator einer Distribution (über orthogonales Komplement)
+
 Man betrachte die auf $\mathcal{M}=\mathbb{R}^{3}$
 definierten Vektorfelder 
 

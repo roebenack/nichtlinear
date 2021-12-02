@@ -4,6 +4,8 @@ title: Beispiel 3.11
 mathjax: true
 ---
 
+## Lie-Ableitung eines Vektorfeldes (Lie-Klammer)
+
 Man betrachte die auf $\mathcal{M}=\mathbb{R}^{3}$
 definierten Vektorfelder 
 

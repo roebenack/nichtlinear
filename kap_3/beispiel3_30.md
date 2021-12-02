@@ -4,6 +4,8 @@ title: Beispiel 3.30
 mathjax: true
 ---
 
+## Annihilator einer Kodistribution
+
 Man betrachte auf der Menge $\mathcal{M}=\mathbb{R}^{3}\setminus \lbrace 0\rbrace$ definierte Skalarfeld
 
 $$

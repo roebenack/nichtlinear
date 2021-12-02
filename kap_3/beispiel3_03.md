@@ -4,6 +4,8 @@ title: Beispiel 3.3
 mathjax: true
 ---
 
+## Lie-Ableitung eines Skalarfeldes
+
 Man betrachte die auf $\mathcal{M}=\mathbb{R}^{3}$
 definierten Felder 
 

@@ -17,4 +17,7 @@ permalink: kapitel3
 |[Beispiel 3.30](beispiel3_30.md)|S. 81-82| Annihilator einer Kodistribution| [html](Annihilator_Kodistr.html)| [wxmx](Annihilator_Kodistr.wxmx)|
 |[Beispiel 3.34](beispiel3_34.md)|S. 85|Involutivität (Test)| [html](Involutiv_Test.html)| [wxmx](Involutiv_Test.wxmx)|
 |[Beispiel 3.44](beispiel3_44.md)|S. 94|Involutiver Abschluss| [html](Involutiv_Abschluss.html)| [wxmx](Involutiv_Abschluss.wxmx)|
+|[Beispiel 3.46](beispiel3_46.md)|S. 97-98|Äußeres Produkt von Differentialformen| [html](Formen_Keilprodukt.html)| [wxmx](Formen_Keilprodukt.wxmx)|
+|[Beispiel 3.50](beispiel3_50.md)|S. 100-101|Äußere Ableitung von Differentialformen| [html](Formen_Ableitung.html)| [wxmx](Formen_Ableitung.wxmx)|
+|[Beispiel 3.57](beispiel3_57.md)|S. 103-104|Integrierbarkeit (Tst mit Satz von Frobenius)| [html](Formen_Integrierbarkeit.html)| [wxmx](Formen_Integrierbarkeit.wxmx)|
 

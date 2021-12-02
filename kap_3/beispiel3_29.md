@@ -4,6 +4,8 @@ title: Beispiel 3.29
 mathjax: true
 ---
 
+## Annihilator einer Distribution (über Kreuzprodukt)
+
 Man betrachte die auf $\mathcal{M}=\mathbb{R}^{3}$
 definierten Vektorfelder 
 

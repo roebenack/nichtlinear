@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <title>Formen_Integrierbarkeit</title>
+    <meta name="generator" content="wxMaxima"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script type="text/x-mathjax-config">  MathJax.Hub.Config({
+    displayAlign: "left",
+    context: "MathJax",
+    TeX: {TagSide: "left"}
+  })
+</script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async="async">  // A comment that hinders wxWidgets from optimizing this tag too much.
+</script>
+    <link rel="stylesheet" type="text/css" href="Formen_Integrierbarkeit_htmlimg/Formen_Integrierbarkeit.css"/>
+  </head>
+  <body>
+    <!-- ****************************************************** -->
+    <!-- *        Created with wxMaxima version 20.12.1       * -->
+    <!-- ****************************************************** -->
+    <noscript>
+      <div class="error message">
+        <p>Please enable JavaScript in order to get a 2d display of the equations embedded in this web page.</p>
+      </div>
+    </noscript>
+    <p hidden="hidden">\(      \DeclareMathOperator{\abs}{abs}
+      \newcommand{\ensuremath}[1]{\mbox{$#1$}}
+\)</p>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i1)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">if</span>
+            <span class="code_function">get</span>
+            <span class="code_operator">(</span>
+            <span class="code_operator">'</span>
+            <span class="code_variable">cartan</span>
+            <span class="code_endofline">,</span>
+            <span class="code_operator">'</span>
+            <span class="code_variable">version</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">=</span>
+            <span class="code_function">false</span>
+            <span class="code_function">then</span>
+            <span class="code_function">load</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">cartan</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i2)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_function">init_cartan</span>
+            <span class="code_operator">(</span>
+            <span class="code_operator">[</span>
+            <span class="code_variable">x1</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x2</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">x3</span>
+            <span class="code_operator">]</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}\left[ \ensuremath{\mathrm{dx1}}\operatorname{,}\ensuremath{\mathrm{dx2}}\operatorname{,}\ensuremath{\mathrm{dx3}}\right] \]
+</p>
+    <!-- Text cell -->
+    <div class="comment">1-Form ω
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i3)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">ω</span>
+            <span class="code_operator">:</span>
+            <span class="code_number">4</span>
+            <span class="code_operator">·</span>
+            <span class="code_variable">x1</span>
+            <span class="code_operator">·</span>
+            <span class="code_variable">x2</span>
+            <span class="code_operator">·</span>
+            <span class="code_variable">dx1</span>
+            <span class="code_operator">+</span>
+            <span class="code_number">4</span>
+            <span class="code_operator">·</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x2</span>
+            <span class="code_operator">^</span>
+            <span class="code_number">2</span>
+            <span class="code_operator">)</span>
+            <span class="code_operator">·</span>
+            <span class="code_variable">dx2</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{(\omega )	}4 {{\ensuremath{\mathrm{x2}}}^{2}} \ensuremath{\mathrm{dx2}}+4 \ensuremath{\mathrm{x1}}\, \ensuremath{\mathrm{x2}}\, \ensuremath{\mathrm{dx1}}\]
+</p>
+    <!-- Text cell -->
+    <div class="comment">Äußere Ableitung dω
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i4)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">dω</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">ext_diff</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">ω</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{(d\omega )	}-4 \ensuremath{\mathrm{x1}}\, \ensuremath{\mathrm{dx1}}\, \ensuremath{\mathrm{dx2}}\]
+</p>
+    <!-- Text cell -->
+    <div class="comment">Test auf Integrierbarkeit (Frobenius)
+</div>
+    <!-- Code cell -->
+    <table>
+      <tr>
+        <td>
+          <span class="prompt">(%i5)	
+  </span>
+        </td>
+        <td>
+          <span class="input">
+            <span class="code_variable">dω</span>
+            <span class="code_endofline">~</span>
+            <span class="code_variable">ω</span>
+            <span class="code_endofline">;</span>
+          </span>
+        </td>
+      </tr>
+    </table>
+    <p>\[\operatorname{	}0\]
+</p>
+    <hr/>
+    <p>
+      <small> Created with 
+        <a href="https://wxMaxima-developers.github.io/wxmaxima/">wxMaxima</a>.</small>
+    </p>
+  </body>
+</html>

@@ -4,6 +4,8 @@ title: Beispiel 3.21
 mathjax: true
 ---
 
+## Lie-Ableitung eines Kovektorfeldes
+
 Man betrachte die auf $\mathcal{M}=\mathbb{R}^{3}$
 definierten Felder 
 
