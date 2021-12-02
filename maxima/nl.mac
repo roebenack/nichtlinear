@@ -1,0 +1,195 @@
+/* [wxMaxima: comment start ]
+Routinen zur nichtlinearen Regelung
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: comment start ]
+Lie-Ableitung eines Skalarfeldes
+f ist als Liste zu übergeben; 
+Aufruf mit 3 und 4 Argumenten möglich
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+LieScalar([l]):=block([f,h,x,k,Lfh],
+    if (length(l)<3) or (length(l)>4) then 
+       error ("Aufruf mit 3 oder 4 Argumenten."),
+    f:l[1], /* Vektorfeld */
+    h:l[2], /* Skalarfeld */
+    x:l[3], /* Variable   */
+    if length(l)=3 then k:1 else k:l[4],
+    if not(nonnegintegerp(k)) then 
+       error ("Ordnung k muss natürliche Zahl sein."),
+    if k=0 then return(h)
+    else 
+        Lfh:jacobian([h],x).f,
+        return(LieScalar(f,Lfh,x,k-1))
+)$
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Lie-Klammer bzw. Lie-Ableitung eines Vektorfeldes
+f und g sind als Listen zu übergeben; 
+für weitere Berechnungen ggf. mit columnvector() umwandeln (siehe unten)
+Aufruf mit 3 und 4 Argumenten möglich
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+LieBracket([l]):=block([f,g,x,k,Df,Dg,ad],
+    if (length(l)<3) or (length(l)>4) then 
+       error ("Aufruf mit 3 oder 4 Argumenten."),
+    f:l[1],
+    g:l[2],
+    x:l[3],
+    if length(l)=3 then k:1 else k:l[4],
+    if not(nonnegintegerp(k)) then 
+       error ("Ordnung k muss natürliche Zahl sein."),
+    if k=0 then return(g)
+    else 
+        Df:jacobian(f,x),
+        Dg:jacobian(g,x),
+        ad:list_matrix_entries(Dg.f-Df.g),
+        return(LieBracket(f,ad,x,k-1))
+)$
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Lie-Ableitung von Kovektorfeldern
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+LieCovector([l]):=block([f,w,x,k,Df,Dw,Lfw],
+    if (length(l)<3) or (length(l)>4) then 
+       error ("Aufruf mit 3 oder 4 Argumenten."),
+    f:l[1],
+    w:l[2],
+    x:l[3],
+    if length(l)=3 then k:1 else k:l[4],
+    if not(nonnegintegerp(k)) then 
+       error ("Ordnung k muss natürliche Zahl sein."),
+    if k=0 then return(w)
+    else 
+        Df:jacobian(f,x),
+        Dw:jacobian(w,x),
+        Lfw:list_matrix_entries(w.Df+f.transpose(Dw)),
+        return(LieCovector(f,Lfw,x,k-1))
+)$
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Test auf Involutivität
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+Involutivep(L,x):=block([F,G,i,j,r],
+    r:length(L),
+    F:apply('matrix,L),
+    F:transpose(F),
+    G:copy(F),  
+    for i:1 thru r do 
+        for j:i+1 thru r do block([f1,f2],
+            f1:list_matrix_entries(col(F,i)),
+            f2:list_matrix_entries(col(F,j)),
+            G:addcol(G,LieBracket(f1,f2,x))
+    ),
+    is(rank(F)=rank(G))
+)$
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Involutiver Abschluss
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+InvolutiveClosure(L,x):=block([flag,F,G,i,j,r,n],
+    F:apply('matrix,L),
+    F:transpose(F),
+    flag:true,
+    while flag do (
+        flag:false,
+        [n,r]:matrix_size(F),
+        for i:1 thru r do 
+            for j:i+1 thru r do block([f1,f2],
+                f1:list_matrix_entries(col(F,i)),
+                f2:list_matrix_entries(col(F,j)),
+                G:addcol(F,LieBracket(f1,f2,x)),
+                if rank(F)<rank(G) then (
+                    F:copy(G),
+                    flag:true
+                )       
+        )
+    ),
+    makelist(makelist(F[i,j],i,1,n),j,1,r)
+)$
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Steuerbarkeitsmatrix
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+ControllabilityMatrix(f,g,x):=block([i,n,L],
+    n:length(x),
+    if length(f)#n then
+        error("Dimensionen von f und x müssen übereinstimmen."),
+    if length(g)#n then
+        error("Dimensionen von g und x müssen übereinstimmen."),
+    L:makelist(LieBracket(-f,g,x,i),i,0,n-1),
+    transpose(apply(matrix,L))
+    )$
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Beobachtbarkeitsabbildung
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+ObservabilityMap(f,h,x):=block([i,n],
+    n:length(x),
+    makelist(LieScalar(f,h,x,i),i,0,n-1)
+    )$
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Beobachtbarkeitsmatrix
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+ObservabilityMatrix(f,h,x):=jacobian(ObservabilityMap(f,h,x),x)$
+/* [wxMaxima: input   end   ] */
+
+
+/* [wxMaxima: comment start ]
+Relativer Grad
+   [wxMaxima: comment end   ] */
+
+
+/* [wxMaxima: input   start ] */
+RelativeDegree(f,g,h,x):=block([n,r:inf,lie],
+    n:length(x),
+    for k:1 thru n do (
+        lie:ratsimp(LieScalar(g,h,x)),
+        if not (lie=0)
+        then (r:k, return(r)),
+        h:LieScalar(f,h,x) 
+    ),
+    r
+)$
+/* [wxMaxima: input   end   ] */
+
+
+
