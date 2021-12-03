@@ -10,7 +10,7 @@ Für das kinematische Modell des mobilen Roboters wird die *Steuerbarkeitsmatrix
 
 ### Maxima
 
-<iframe src="Roboter_rel_Grad.html" width="100%" height="1050"></iframe>
+<iframe src="Roboter_Steuerbarkeitsmatrix.html" width="100%" height="950"></iframe>
 
 
 Klaus Röbenack:
