@@ -24,13 +24,8 @@ Für die symbolischen Berechnungen wird das Open-Source-Computer-Algebra-System 
 
 ## Maxima-Routinen
 
-|Routinen|Seite(n)|Algorithmus|
-|---|---|---|
-|[Lie-Ableitung eines Skalarfeldes](maxima/LieScalar.md)|S. 47|Algorithmus 3.1|
-|[Lie-Ableitung eines Vektorfeldes](maxima/LieBracket.md)|S. 56|Algorithmus 3.2|
-|[Lie-Ableitung eines Kovektorfeldes](maxima/LieCovector.md)|S. 64|Algorithmus 3.3
-|Test einer Distribution auf Involutivität|S. 84|Algorithmus 3.4|
-|Involutiver Abschluss einer Distribution|S. 94|Algorithmus 3.5|
-|Relativer Grad|S. 116|Algorithmus 4.6|
-|Steuerbarkeitsmatrix|S. 153|Algorithmus 4.7|
-|Beobachtbarkeitsabbildung und -matrix|S. 288|Algorithmus 6.8|
+> Wilhelm Haager:   
+> [*Computeralgebra mit Maxima
+Grundlagen der Anwendung und Programmierung*](https://www.hanser-elibrary.com/isbn/9783446448681).   
+> Carl Hanser Verlag GmbH & Co. KG, 2. Auflage, 2019. ISBN: 978-3-446-44868-1
+
