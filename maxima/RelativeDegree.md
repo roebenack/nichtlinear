@@ -36,6 +36,8 @@ Aufruf:
 r=RelativeDegree(f,g,h,x);
 ```
 
+Anwendung: [Beispiel 4.4](../kap_4/beispiel4_04.md)
+
 ---
 
 Klaus Röbenack:

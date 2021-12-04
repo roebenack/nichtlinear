@@ -45,6 +45,8 @@ Aufruf:
 Q=ControllabilityMatrix(f,g,x)
 ```
 
+Anwendung: [Beispiel 4.42](../kap_4/beispiel4_42.md)
+
 ---
 
 Klaus Röbenack:

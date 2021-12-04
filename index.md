@@ -24,6 +24,10 @@ Für die symbolischen Berechnungen wird das Open-Source-Computer-Algebra-System 
 
 ## Maxima-Routinen
 
+Die wichtigsten Routinen zur Analyse und Regelung nichtlinearer Systeme wurden in einer Biblothek für das Open-Source-Computer-Algebra-System [Maxima](https://maxima.sourceforge.io/) zusammengefasst. [Link](maxima/routinen.md) 
+
+Zum Einstieg in dieses Computer-Algebra-System ist folgendes Buch empfehlenswert:
+
 > Wilhelm Haager:   
 > [*Computeralgebra mit Maxima
 Grundlagen der Anwendung und Programmierung*](https://www.hanser-elibrary.com/isbn/9783446448681).   

@@ -56,6 +56,8 @@ Aufruf für Lie-Ableitung $L_f^kh(x)$ der Ordnung $k$:
 LieBracket(f,g,x,k)
 ```
 
+Anwendung: [Beispiel 3.11](../kap_3/beispiel3_11.md)
+
 ---
 
 Klaus Röbenack:

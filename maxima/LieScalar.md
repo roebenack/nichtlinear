@@ -53,6 +53,8 @@ Aufruf für Lie-Ableitung $L_f^kh(x)$ der Ordnung $k$:
 LieScalar(f,h,x,k)
 ```
 
+Anwendung: [Beispiel 3.3](../kap_3/beispiel3_03.md)
+
 ---
 
 Klaus Röbenack:
