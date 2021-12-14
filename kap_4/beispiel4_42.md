@@ -6,7 +6,19 @@ mathjax: true
 
 ## Mobiler Roboter, Berechnung der Steuerbarkeitsmatrix
 
-Für das kinematische Modell des mobilen Roboters wird die *Steuerbarkeitsmatrix* berechnet.
+Für das kinematische Modell des mobilen Roboters 
+
+$$
+ \dot{x}=
+ \begin{pmatrix}
+  \sin x_3 \\ \cos x_3\\ 0
+ \end{pmatrix} +
+ \begin{pmatrix}
+  0 \\ 0 \\ 1
+ \end{pmatrix} u.
+$$
+
+wird die *Steuerbarkeitsmatrix* berechnet.
 
 ### Maxima
 

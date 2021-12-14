@@ -6,14 +6,26 @@ mathjax: true
 
 ## Mobiler Roboter, Berechnung des relativen Grades
 
-Für das kinematische Modell des mobilen Roboters betrachtet man die Ausgangsabbildung
+Der mobile Roboter fahre mit konstanter translatorischer Geschwindigkeit. Die Beeinflussung erfolgt nur über den Lenkwinkel $u$. Damit erhält man das kinematische Modell
+
+$$
+ \dot{x}=
+ \begin{pmatrix}
+  \sin x_3 \\ \cos x_3\\ 0
+ \end{pmatrix} +
+ \begin{pmatrix}
+  0 \\ 0 \\ 1
+ \end{pmatrix} u.
+$$
+
+Dazu betrachte man die Ausgangsabbildung
 
 $$
 h(x)=c_1x_1 + c_2x_2
 $$
 
 mit $c_1\neq0 \lor c_2\neq0$.
-Berechnet wird der *relative Grad*.
+Berechnet wird der *relative Grad* $r=2$.
 
 ### Maxima
 
