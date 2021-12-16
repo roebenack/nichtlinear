@@ -20,12 +20,11 @@ x_{2}\\
 \end{array}\right)}_{g(x)}u
 $$
 
-beschreiben. Berechnet wird eine Differentialform, us der sich der Ausgang bestimmen lässt.
-
+beschreiben. Berechnet wird zunächst eines Basis des eindimensionalen Annihilator. Daraus ergibt sich eine Differentialform $\omega$, aus der sich durch Integration die Ausgangsabbildung $h$ bestimmen lässt.
 
 ### Maxima
 
-<iframe src="Inverses_Pendel_mit_Rad_EZ.html" width="100%" height="1350"></iframe>
+<iframe src="Inverses_Pendel_mit_Rad_EZ.html" width="100%" height="1700"></iframe>
 
 
 Klaus Röbenack:
