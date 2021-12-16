@@ -21,18 +21,25 @@ wird der involutive Abschluss $\operatorname{inv}(\Delta)$ berechnet.
 Die die Distribution aufspannenden Vektorfelder sind als Liste zu übergeben,
 
 ```maxima
-Involutivep(L,x):=block([F,G,i,j,r],
-    r:length(L),
+InvolutiveClosure(L,x):=block([flag,F,G,i,j,r,n],
     F:apply('matrix,L),
     F:transpose(F),
-    G:copy(F),  
-    for i:1 thru r do 
-        for j:i+1 thru r do block([f1,f2],
-            f1:list_matrix_entries(col(F,i)),
-            f2:list_matrix_entries(col(F,j)),
-            G:addcol(G,LieBracket(f1,f2,x))
+    flag:true,
+    while flag do (
+        flag:false,
+        [n,r]:matrix_size(F),
+        for i:1 thru r do 
+            for j:i+1 thru r do block([f1,f2],
+                f1:list_matrix_entries(col(F,i)),
+                f2:list_matrix_entries(col(F,j)),
+                G:addcol(F,LieBracket(f1,f2,x)),
+                if rank(F)<rank(G) then (
+                    F:copy(G),
+                    flag:true
+                )       
+        )
     ),
-    is(rank(F)=rank(G))
+    makelist(makelist(F[i,j],i,1,n),j,1,r)
 )$
 ```
 
