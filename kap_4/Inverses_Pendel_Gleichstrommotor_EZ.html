@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="">
   <head>
-    <title>Inverses_Pendel_mit_Rad_EZ</title>
+    <title>Inverses_Pendel_Gleichstrommotor_EZ</title>
     <meta name="generator" content="wxMaxima"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <script type="text/x-mathjax-config">  MathJax.Hub.Config({
@@ -12,7 +12,7 @@
 </script>
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async="async">  // A comment that hinders wxWidgets from optimizing this tag too much.
 </script>
-    <link rel="stylesheet" type="text/css" href="Inverses_Pendel_mit_Rad_EZ_htmlimg/Inverses_Pendel_mit_Rad_EZ.css"/>
+    <link rel="stylesheet" type="text/css" href="Inverses_Pendel_Gleichstrommotor_EZ_htmlimg/Inverses_Pendel_Gleichstrommotor_EZ.css"/>
   </head>
   <body>
     <!-- ****************************************************** -->
@@ -400,13 +400,13 @@
       </tr>
     </table>
     <!-- Text cell -->
-    <div class="comment">Beispiel: Inveses Pendel mit Trägheitsrad
+    <div class="comment">Beispiel: Inverses Pendel
 </div>
     <!-- Code cell -->
     <table>
       <tr>
         <td>
-          <span class="prompt">(%i6)	
+          <span class="prompt">(%i7)	
   </span>
         </td>
         <td>
@@ -417,37 +417,42 @@
             <span class="code_variable">x2</span>
             <span class="code_endofline">,</span>
             <span class="code_operator">(</span>
-            <span class="code_variable">m0</span>
+            <span class="code_variable">m</span>
+            <span class="code_operator">·</span>
+            <span class="code_variable">G</span>
+            <span class="code_operator">·</span>
+            <span class="code_variable">l</span>
             <span class="code_operator">·</span>
             <span class="code_function">sin</span>
             <span class="code_operator">(</span>
             <span class="code_variable">x1</span>
             <span class="code_operator">)</span>
+            <span class="code_operator">−</span>
+            <span class="code_variable">d</span>
+            <span class="code_operator">·</span>
+            <span class="code_variable">x2</span>
+            <span class="code_operator">+</span>
+            <span class="code_variable">K</span>
+            <span class="code_operator">·</span>
+            <span class="code_variable">x3</span>
             <span class="code_operator">)</span>
             <span class="code_operator">/</span>
-            <span class="code_operator">(</span>
-            <span class="code_variable">J1</span>
-            <span class="code_operator">−</span>
-            <span class="code_variable">I2</span>
-            <span class="code_operator">)</span>
+            <span class="code_variable">J</span>
             <span class="code_endofline">,</span>
             <span class="code_operator">−</span>
             <span class="code_operator">(</span>
-            <span class="code_variable">m0</span>
+            <span class="code_variable">K</span>
             <span class="code_operator">·</span>
-            <span class="code_function">sin</span>
-            <span class="code_operator">(</span>
-            <span class="code_variable">x1</span>
-            <span class="code_operator">)</span>
+            <span class="code_variable">x2</span>
+            <span class="code_operator">+</span>
+            <span class="code_variable">R</span>
+            <span class="code_operator">·</span>
+            <span class="code_variable">x3</span>
             <span class="code_operator">)</span>
             <span class="code_operator">/</span>
-            <span class="code_operator">(</span>
-            <span class="code_variable">J1</span>
-            <span class="code_operator">−</span>
-            <span class="code_variable">I2</span>
-            <span class="code_operator">)</span>
+            <span class="code_variable">L</span>
             <span class="code_operator">]</span>
-            <span class="code_endofline">;</span>
+            <span class="code_endofline">$</span>
             <span class="code_endofline">
               <br/>
             </span>
@@ -456,28 +461,15 @@
             <span class="code_operator">[</span>
             <span class="code_number">0</span>
             <span class="code_endofline">,</span>
-            <span class="code_operator">−</span>
+            <span class="code_number">0</span>
+            <span class="code_endofline">,</span>
+            <span class="code_operator">(</span>
             <span class="code_number">1</span>
             <span class="code_operator">/</span>
-            <span class="code_operator">(</span>
-            <span class="code_variable">J1</span>
-            <span class="code_operator">−</span>
-            <span class="code_variable">I2</span>
-            <span class="code_operator">)</span>
-            <span class="code_endofline">,</span>
-            <span class="code_variable">J1</span>
-            <span class="code_operator">/</span>
-            <span class="code_operator">(</span>
-            <span class="code_variable">I2</span>
-            <span class="code_operator">·</span>
-            <span class="code_operator">(</span>
-            <span class="code_variable">J1</span>
-            <span class="code_operator">−</span>
-            <span class="code_variable">I2</span>
-            <span class="code_operator">)</span>
+            <span class="code_variable">L</span>
             <span class="code_operator">)</span>
             <span class="code_operator">]</span>
-            <span class="code_endofline">;</span>
+            <span class="code_endofline">$</span>
             <span class="code_endofline">
               <br/>
             </span>
@@ -490,17 +482,21 @@
             <span class="code_endofline">,</span>
             <span class="code_variable">x3</span>
             <span class="code_operator">]</span>
-            <span class="code_endofline">;</span>
+            <span class="code_endofline">$</span>
+            <span class="code_endofline">
+              <br/>
+            </span>
+            <span class="code_variable">n</span>
+            <span class="code_operator">:</span>
+            <span class="code_function">length</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">x</span>
+            <span class="code_operator">)</span>
+            <span class="code_endofline">$</span>
           </span>
         </td>
       </tr>
     </table>
-    <p>\[\operatorname{(f)	}\left[ \ensuremath{\mathrm{x2}}\operatorname{,}\frac{\ensuremath{\mathrm{m0}} \sin{\left( \ensuremath{\mathrm{x1}}\right) }}{\ensuremath{\mathrm{J1}}-\ensuremath{\mathrm{I2}}}\operatorname{,}-\frac{\ensuremath{\mathrm{m0}} \sin{\left( \ensuremath{\mathrm{x1}}\right) }}{\ensuremath{\mathrm{J1}}-\ensuremath{\mathrm{I2}}}\right] \]
-</p>
-    <p>\[\operatorname{(g)	}\left[ 0\operatorname{,}-\frac{1}{\ensuremath{\mathrm{J1}}-\ensuremath{\mathrm{I2}}}\operatorname{,}\frac{\ensuremath{\mathrm{J1}}}{\ensuremath{\mathrm{I2}}\, \left( \ensuremath{\mathrm{J1}}-\ensuremath{\mathrm{I2}}\right) }\right] \]
-</p>
-    <p>\[\operatorname{(x)	}\left[ \ensuremath{\mathrm{x1}}\operatorname{,}\ensuremath{\mathrm{x2}}\operatorname{,}\ensuremath{\mathrm{x3}}\right] \]
-</p>
     <!-- Text cell -->
     <div class="comment">Berechnung der Steuerbarkeitsmatrix
 </div>
@@ -508,7 +504,7 @@
     <table>
       <tr>
         <td>
-          <span class="prompt">(%i7)	
+          <span class="prompt">(%i8)	
   </span>
         </td>
         <td>
@@ -528,12 +524,12 @@
         </td>
       </tr>
     </table>
-    <p>\[\operatorname{(Qs)	}\begin{pmatrix}0 &amp; -\frac{1}{\ensuremath{\mathrm{J1}}-\ensuremath{\mathrm{I2}}} &amp; 0\\
--\frac{1}{\ensuremath{\mathrm{J1}}-\ensuremath{\mathrm{I2}}} &amp; 0 &amp; -\frac{\ensuremath{\mathrm{m0}} \cos{\left( \ensuremath{\mathrm{x1}}\right) }}{{{\left( \ensuremath{\mathrm{J1}}-\ensuremath{\mathrm{I2}}\right) }^{2}}}\\
-\frac{\ensuremath{\mathrm{J1}}}{\ensuremath{\mathrm{I2}}\, \left( \ensuremath{\mathrm{J1}}-\ensuremath{\mathrm{I2}}\right) } &amp; 0 &amp; \frac{\ensuremath{\mathrm{m0}} \cos{\left( \ensuremath{\mathrm{x1}}\right) }}{{{\left( \ensuremath{\mathrm{J1}}-\ensuremath{\mathrm{I2}}\right) }^{2}}}\end{pmatrix}\]
+    <p>\[\operatorname{(Qs)	}\begin{pmatrix}0 &amp; 0 &amp; \frac{K}{J L}\\
+0 &amp; \frac{K}{J L} &amp; -\frac{K d}{{{J}^{2}} L}-\frac{K R}{J {{L}^{2}}}\\
+\frac{1}{L} &amp; -\frac{R}{{{L}^{2}}} &amp; \frac{{{R}^{2}}}{{{L}^{3}}}-\frac{{{K}^{2}}}{J {{L}^{2}}}\end{pmatrix}\]
 </p>
     <!-- Text cell -->
-    <div class="comment">Orthogonales Komplement zu den ersten zwei Spalten
+    <div class="comment">Inverse Steuerbarkeitsmatrix
 </div>
     <!-- Code cell -->
     <table>
@@ -544,43 +540,26 @@
         </td>
         <td>
           <span class="input">
-            <span class="code_function">orthogonal_complement</span>
-            <span class="code_operator">(</span>
-            <span class="code_function">col</span>
-            <span class="code_operator">(</span>
-            <span class="code_variable">Qs</span>
-            <span class="code_endofline">,</span>
-            <span class="code_number">1</span>
-            <span class="code_operator">)</span>
-            <span class="code_endofline">,</span>
-            <span class="code_function">col</span>
-            <span class="code_operator">(</span>
-            <span class="code_variable">Qs</span>
-            <span class="code_endofline">,</span>
-            <span class="code_number">2</span>
-            <span class="code_operator">)</span>
-            <span class="code_operator">)</span>
-            <span class="code_endofline">$</span>
-            <span class="code_endofline">
-              <br/>
-            </span>
-            <span class="code_variable">Ω</span>
+            <span class="code_variable">QI</span>
             <span class="code_operator">:</span>
-            <span class="code_function">factor</span>
+            <span class="code_function">ratsimp</span>
             <span class="code_operator">(</span>
-            <span class="code_variable">%</span>
+            <span class="code_function">invert</span>
+            <span class="code_operator">(</span>
+            <span class="code_variable">Qs</span>
+            <span class="code_operator">)</span>
             <span class="code_operator">)</span>
             <span class="code_endofline">;</span>
           </span>
         </td>
       </tr>
     </table>
-    <p>\[\operatorname{(\Omega )	}\operatorname{span}\left( \begin{pmatrix}0\\
-\ensuremath{\mathrm{J1}}\, \left( \ensuremath{\mathrm{J1}}-\ensuremath{\mathrm{I2}}\right) \\
-\ensuremath{\mathrm{I2}}\, \left( \ensuremath{\mathrm{J1}}-\ensuremath{\mathrm{I2}}\right) \end{pmatrix}\right) \]
+    <p>\[\operatorname{(QI)	}\begin{pmatrix}\frac{R d+{{K}^{2}}}{K} &amp; \frac{J R}{K} &amp; L\\
+\frac{L d+J R}{K} &amp; \frac{J L}{K} &amp; 0\\
+\frac{J L}{K} &amp; 0 &amp; 0\end{pmatrix}\]
 </p>
     <!-- Text cell -->
-    <div class="comment">Differentialfrom/Kovektorfeld
+    <div class="comment">Differentialform/Kovektorfeld
 </div>
     <!-- Code cell -->
     <table>
@@ -595,12 +574,11 @@
             <span class="code_operator">:</span>
             <span class="code_function">list_matrix_entries</span>
             <span class="code_operator">(</span>
-            <span class="code_function">first</span>
+            <span class="code_function">row</span>
             <span class="code_operator">(</span>
-            <span class="code_function">args</span>
-            <span class="code_operator">(</span>
-            <span class="code_variable">Ω</span>
-            <span class="code_operator">)</span>
+            <span class="code_variable">QI</span>
+            <span class="code_endofline">,</span>
+            <span class="code_variable">n</span>
             <span class="code_operator">)</span>
             <span class="code_operator">)</span>
             <span class="code_endofline">;</span>
@@ -608,7 +586,7 @@
         </td>
       </tr>
     </table>
-    <p>\[\operatorname{(\omega )	}\left[ 0\operatorname{,}\ensuremath{\mathrm{J1}}\, \left( \ensuremath{\mathrm{J1}}-\ensuremath{\mathrm{I2}}\right) \operatorname{,}\ensuremath{\mathrm{I2}}\, \left( \ensuremath{\mathrm{J1}}-\ensuremath{\mathrm{I2}}\right) \right] \]
+    <p>\[\operatorname{(\omega )	}\left[ \frac{J L}{K}\operatorname{,}0\operatorname{,}0\right] \]
 </p>
     <!-- Text cell -->
     <div class="comment">Potential/Ausgangsabbildung
@@ -624,21 +602,18 @@
           <span class="input">
             <span class="code_variable">h</span>
             <span class="code_operator">:</span>
-            <span class="code_function">factor</span>
-            <span class="code_operator">(</span>
             <span class="code_function">potential</span>
             <span class="code_operator">(</span>
             <span class="code_variable">ω</span>
             <span class="code_endofline">,</span>
             <span class="code_variable">x</span>
             <span class="code_operator">)</span>
-            <span class="code_operator">)</span>
             <span class="code_endofline">;</span>
           </span>
         </td>
       </tr>
     </table>
-    <p>\[\operatorname{(h)	}\left( \ensuremath{\mathrm{J1}}-\ensuremath{\mathrm{I2}}\right) \, \left( \ensuremath{\mathrm{I2}}\, \ensuremath{\mathrm{x3}}+\ensuremath{\mathrm{J1}}\, \ensuremath{\mathrm{x2}}\right) \]
+    <p>\[\operatorname{(h)	}\frac{J L\, \ensuremath{\mathrm{x1}}}{K}\]
 </p>
     <hr/>
     <p>
