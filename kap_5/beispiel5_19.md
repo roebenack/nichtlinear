@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Beispiel 4.47
+title: Beispiel 5.19
 mathjax: true
 ---
 
@@ -16,14 +16,14 @@ $$
 \end{array}
 $$
 
-beschreiben. Die letzte Zeile der inversen Steuerbarkeitsmatrix liefert ein exaktes Differential $\omega$, aus welchem die Ausgangsabbildung $h$ berechnet wird.
+beschreiben. Berechnet wird eine zustandsabhängige Reglerverstärkung, welche einer Approximation erster Ordnung der exakten Eingangs-Zustands-Linearisierung entspricht.
 
 ### Maxima
 
-<iframe src="Inverses_Pendel_Gleichstrommotor_EZ.html" width="100%" height="1500"></iframe>
+<iframe src="Inverses_Pendel_Approx_1.html" width="100%" height="750"></iframe>
 
 
 Klaus Röbenack:
 [*Nichtlineare Regelungssysteme - Theorie und Anwendung der exakten Linearisierung.*](https://link.springer.com/book/10.1007/978-3-662-44091-9)   
-Springer Vieweg, 2017, **S. 161**.
+Springer Vieweg, 2017, **S. 260**.
 

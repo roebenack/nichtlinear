@@ -21,6 +21,7 @@ Für die symbolischen Berechnungen wird das Open-Source-Computer-Algebra-System 
 |[Kapitel 2](kap_2/kapitel2.md)|Mathematische Grundlagen|
 |[Kapitel 3](kap_3/kapitel3.md)|Differentialgeometrische Begriffe|
 |[Kapitel 4](kap_4/kapitel4.md)|Reglerentwurf mittels exakter Linearisierung|
+|[Kapitel 5](kap_5/kapitel5.md)|Erweiterte Regelungskonzepte aus Basis der exakten Linearisierung|
 
 ## Maxima-Routinen
 
