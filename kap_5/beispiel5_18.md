@@ -16,7 +16,7 @@ $$
 \end{array}
 $$
 
-beschreiben. Berechnet wird eine zustandsabhängige Reglerverstärkung, welche einer Approximation nullter Ordnung der exakten Eingangs-Zustands-Linearisierung entspricht.
+beschreiben. Berechnet wird eine zustandsabhängige Reglerverstärkung $\sigma(x)$, welche einer Approximation nullter Ordnung der exakten Eingangs-Zustands-Linearisierung entspricht.
 
 ### Maxima
 
