@@ -22,9 +22,9 @@ aus [Isidori 1995, S. 167]. Das System besitzt den relativen Grad $r=2$. Aus der
 
 ### Maxima
 
-<iframe src="HG_Isidori2.html" width="100%" height="1200"></iframe>
+<iframe src="HG_Isidori2.html" width="100%" height="1100"></iframe>
 
 Klaus Röbenack:
 [*Nichtlineare Regelungssysteme - Theorie und Anwendung der exakten Linearisierung.*](https://link.springer.com/book/10.1007/978-3-662-44091-9)   
-Springer Vieweg, 2017, **S. 291-292**.
+Springer Vieweg, 2017, **S. 309**.
 

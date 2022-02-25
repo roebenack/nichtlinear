@@ -5,7 +5,7 @@
 layout: home
 ---
 
-Auf dieser Webseite bzw. dem zugehörigen Repository befinden sich Code-Beispiele aus dem Lehrbuch
+<a href="audio-verstaerker"><img alt="" src="buch.png" style="width: 160px; float: right; border-width: thick; border-style: solid; border-color: white; border-spacing: 25px" /></a>Auf dieser Webseite bzw. dem zugehörigen Repository befinden sich Code-Beispiele aus dem Lehrbuch
 
 > Klaus Röbenack:   
 > [*Nichtlineare Regelungssysteme. Theorie und Anwendung der exakten Linearisierung*](https://link.springer.com/book/10.1007/978-3-662-44091-9).   
@@ -16,13 +16,14 @@ Für die symbolischen Berechnungen wird das Open-Source-Computer-Algebra-System 
 
 ## Beispiele
 
-|Kapitel| Kapitelüberschrift|
+|Kapitel&nbsp;&nbsp;&nbsp;| Kapitelüberschrift|
 |---|---|
 |[Kapitel 2](kap_2/kapitel2.md)|Mathematische Grundlagen|
 |[Kapitel 3](kap_3/kapitel3.md)|Differentialgeometrische Begriffe|
 |[Kapitel 4](kap_4/kapitel4.md)|Reglerentwurf mittels exakter Linearisierung|
 |[Kapitel 5](kap_5/kapitel5.md)|Erweiterte Regelungskonzepte aus Basis der exakten Linearisierung|
 |[Kapitel 6](kap_6/kapitel6.md)|Beobachter mit großer Verstärkung und starke Beobachter|
+|[Kapitel 7](kap_7/kapitel7.md)|Beobachterentwurf mittels exakter bzw. näherungsweiser Linearisierung der Fehlerdynamik|
 
 
 ## Maxima-Routinen
