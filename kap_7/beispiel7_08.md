@@ -19,7 +19,7 @@ $$
 mit den Parametern $a,b,c>0$ und der Ausgangsgleichung
 
 $$
-y=x_3
+y=x_3.
 $$
 
 Für die Berechnung eines Normalform-Beobachters nach Krener und Isidori benötigt man das *Startvektorfeld* $v$ und die darauf aufbauenden Lie-Klammern:
