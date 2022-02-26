@@ -5,7 +5,7 @@
 layout: home
 ---
 
-<a href="audio-verstaerker"><img alt="" src="buch.png" style="width: 160px; float: right; border-width: thick; border-style: solid; border-color: white; border-spacing: 25px" /></a>Auf dieser Webseite bzw. dem zugehörigen Repository befinden sich Code-Beispiele aus dem Lehrbuch
+<a href="https://link.springer.com/book/10.1007/978-3-662-44091-9"><img alt="NKlaus Röbenack: Nichtlineare Regelungssysteme" src="buch.png" style="width: 160px; float: right; border-width: thick; border-style: solid; border-color: white; border-spacing: 25px" /></a>Auf dieser Webseite bzw. dem zugehörigen Repository befinden sich Code-Beispiele aus dem Lehrbuch
 
 > Klaus Röbenack:   
 > [*Nichtlineare Regelungssysteme. Theorie und Anwendung der exakten Linearisierung*](https://link.springer.com/book/10.1007/978-3-662-44091-9).   
