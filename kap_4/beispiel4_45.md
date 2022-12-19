@@ -29,5 +29,5 @@ beschreiben. Berechnet wird zunächst eines Basis des eindimensionalen Annihilat
 
 Klaus Röbenack:
 [*Nichtlineare Regelungssysteme - Theorie und Anwendung der exakten Linearisierung.*](https://link.springer.com/book/10.1007/978-3-662-44091-9)   
-Springer Vieweg, 2017, **S. 157-159**.
+Springer Vieweg, 2017, **S. 156-159**.
 
